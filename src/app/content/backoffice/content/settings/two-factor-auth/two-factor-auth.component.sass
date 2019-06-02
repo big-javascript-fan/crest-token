@@ -1,0 +1,168 @@
+@import "../../../backoffice.component"
+
+.tfa-wr
+  background: $white
+  border-radius: 10px
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  margin-bottom: 35px
+  padding: 30px 24px
+  input
+    background-color: $white
+    border-radius: 4px
+    height: 40px
+    border: 1px solid #eee
+    box-shadow: none
+    padding-left: 16px
+    line-height: 100%
+    font-family: $lato-regular
+    font-size: 14px
+    color: #7f8fa4
+    outline: none
+    &[readonly], &[disabled]
+      background-color: #f5f6f8
+
+  .enableAuthenticatorSupport
+    .two-factor-auth__title
+      font-family: $lato-bold
+      font-size: 16px
+      color: #637576
+      margin-bottom: 10px
+      text-align: center
+    .two-factor-auth__content-name
+      font-family: $lato-regular
+      font-size: 14px
+      line-height: 1.43
+      color: #7f8fa4
+      text-align: center
+      margin-bottom: 28px
+      &.error
+        margin: 30px 0px
+        color: #e33e57
+    .two-factor-auth__content
+      font-family: $lato-regular
+      font-size: 14px
+      line-height: 1.43
+      color: #7f8fa4
+      margin: 30px 0px
+      text-align: center
+    .btn
+      display: block
+      width: 160px
+      margin: 0 auto
+      &.confirm
+        margin-top: 30px
+        border-radius: 4px
+        background-color: #62ba67
+        font-family: $lato-regular
+        font-size: 14px
+        color: #fff
+        cursor: pointer
+        &[disabled]
+          opacity: 0.5
+    .form-group-enable
+      text-align: center
+      label
+        display: block
+        font-family: $lato-regular
+        font-size: 14px
+        line-height: 1.43
+        color: #7f8fa4
+        margin-bottom: 10px
+      .secret-code
+        border: none
+        border-radius: 6px
+        position: relative
+        background: transparent
+        height: 40px
+        overflow: hidden
+        margin-bottom: 22px
+        input
+          position: absolute
+          top: 0px
+          left: 0px
+          border: none
+          border-radius: 0px
+          font-family: $lato-bold
+          font-size: 16px
+          color: #637576
+          line-height: 100%
+          padding: 0px
+          letter-spacing: 0.1px
+          outline: none
+          width: 100%
+          text-align: center
+        button
+          position: absolute
+          top: 0px
+          right: 0px
+          width: 40px
+          height: 40px
+          background-color: #62ba67
+          border: none
+          font-size: 18px
+          color: $white
+          display: flex
+          justify-content: center
+          align-items: center
+          transition: .2s
+          cursor: pointer
+          &:hover
+            font-size: 22px
+    .QRcode-wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      .image
+        flex: 0 0 30%
+        max-width: 200px
+        display: block
+        img
+          width: 100%
+      &__content
+        display: grid
+        flex: 0 0 68%
+        padding-top: 18px
+        .item
+          display: flex
+          justify-content: flex-start
+          margin-bottom: 24px
+          .index
+            margin-right: 12px
+            span
+              display: block
+              background-color: $white
+              width: 20px
+              height: 20px
+              line-height: 20px
+              font-family: $lato-bold
+              font-size: 10px
+              color: #62ba67
+              text-align: center
+              border-radius: 50%
+              box-shadow: 0 3px 6px 0 rgba(40, 46, 54, 0.07)
+          p
+            font-family: $lato-regular
+            font-size: 14px
+            color: #7f8fa4
+            line-height: 1.43
+    .form-group-factor
+      display: flex
+      flex-direction: column
+      label
+        font-family: $lato-regular
+        font-size: 14px
+        line-height: 2
+        color: #637576
+
+@media (max-width: 992px)
+  .tfa-wr
+    .enableAuthenticatorSupport
+      .QRcode-wrapper
+        flex-direction: column
+        .image
+          max-width: 250px
+          flex: 0 0 100%
+          display: block
+          margin: 0 auto
+        &__content
+          flex: 0 0 100%

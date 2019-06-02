@@ -1,0 +1,254 @@
+@import "../landing.component"
+
+.team
+  .landing-title
+    font-size: 42px
+    font-family: $poppins-bold
+    color: $white
+    line-height: 1.36
+    padding-bottom: 10px
+    span
+      color: #0cc05d
+  .desc
+    font-family: $poppins-regular
+    font-size: 15px
+    line-height: 1.47
+    color: $white
+    width: 100%
+    text-align: center
+  .team-wrapper
+    width: 100%
+    position: relative
+    .wrapper
+      flex-direction: column
+      .items-wrapper
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        position: relative
+        margin-top: 50px
+        .item
+          flex: 25%
+          max-width: 290px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: flex-start
+          margin-bottom: 67px
+          &__photo
+            margin-bottom: 15px
+            width: 200px
+            img
+              width: 100%
+              border-radius: 4px
+              -webkit-filter: grayscale(100%)
+              filter: grayscale(100%)
+          &__name
+            a
+              font-family: $poppins-bold
+              font-size: 20px
+              color: $white
+              text-decoration: none
+              margin-bottom: 10px
+          &__position
+            font-family: $poppins-regular
+            font-size: 14px
+            color: $white
+            opacity: 0.6
+            margin-bottom: 15px
+          &__bio
+            font-family: $poppins-regular
+            font-size: 14px
+            color: $white
+            max-width: 200px
+            text-align: center
+            display: none
+          &__social
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            li
+              margin-right: 26px
+              &:last-child
+                margin-right: 0
+            &-facebook
+              width: 25px
+              height: 25px
+              font-size: 17px
+              display: inline-flex
+              align-items: center
+              justify-content: center
+              color: #2d2d2d
+              background: #5e5e5e
+              text-decoration: none
+              border-radius: 50%
+              transition: $transition
+              &:hover
+                background: $green
+            &-twitter
+              font-size: 25px
+              color: #5e5e5e
+              transition: $transition
+              &:hover
+                color: $green
+            &-linkedin
+              width: 50px
+              height: 50px
+              display: inline-flex
+              align-items: center
+              justify-content: center
+              transition: $transition
+        .modal
+          .modal-dialog
+            margin: 70px auto
+          .modal-content
+            background-color: #1d2028
+            border-radius: 2px
+            .modal-body
+              padding: 16px 40px 68px 40px
+            .close
+              padding-right: 10px
+              text-align: right
+              opacity: 1
+              color: $white
+              font-weight: 100
+              text-shadow: none
+            .profile
+              display: flex
+              flex-wrap: wrap
+              justify-content: space-between
+              font-family: $poppins-regular
+              color: $white
+              .photo
+                flex: 0 0 32%
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                align-items: center
+                img
+                  width: 100%
+                  max-width: 221px
+                  border-radius: 4px
+              .text
+                flex: 0 0 65%
+                display: flex
+                flex-direction: column
+                h4
+                  font-family: $poppins-medium
+                  font-size: 20px
+                  margint-top: 9px
+                p
+                  font-size: 14px
+                  opacity: 0.6
+                  margin-top: 10px
+                  margin-bottom: 17px
+                h6
+                  font-size: 14px
+                  line-height: 1.73
+                  
+  .team-join
+    width: 70%
+    margin: 0 auto
+    .inner
+      margin-top: 60px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: center
+      font-family: $poppins-regular
+      color: $white
+      .cell
+        flex: 0 0 48%
+        display: flex
+        flex-direction: column
+      h5
+        font-size: 20px
+        line-height: 1.6
+        span
+          color: #0cc05d
+      ul
+        list-style: none
+        font-size: 16px
+        margin-left: 0
+        margin-top: 40px
+        margin-bottom: 30px
+        padding-left: 12px
+        li
+          line-height: 1.75
+          padding-left: 1em
+          text-indent: -1.6em
+          margin-bottom: 11px
+          &:before
+            content: ''
+            display: inline-block
+            margin-right: 11px
+            width: 12px
+            height: 12px
+            border: 1px solid #00e55d
+            border-radius: 50%
+            background-image: linear-gradient(62deg, rgba(34, 122, 94, 0), rgba(0, 229, 93, 0.2))
+      .btn-green
+        width: 175px
+      img
+        width: 100%
+        max-width: 400px
+        margin: 0 auto
+
+@media screen and (max-width: 1200px)
+  .team
+    .team-wrapper
+      .wrapper
+        .items-wrapper
+          justify-content: center
+          .item
+            max-width: 300px
+
+@media screen and (max-width: 900px)
+  .team
+    .landing-title
+      font-family: $poppins-semibold
+      font-size: 27px
+    .team-wrapper
+      .wrapper
+        .items-wrapper
+          &:before
+            display: none
+          .item
+            flex: 50%
+    .team-join
+      .inner
+        .cell
+          flex: 0 0 100%
+          .btn-green
+            margin: 0 auto
+          &:first-child
+            margin-bottom: 30px
+
+@media screen and (max-width: 600px)
+  .team
+    padding: 0
+    .team-wrapper
+      padding: 60px 0
+      .wrapper
+        .items-wrapper
+          .item
+            flex: 100%
+            &:last-child
+              margin-bottom: 0 !important
+          .modal
+            .modal-dialog
+              margin: 30px auto
+            .modal-content
+              .modal-body
+                padding: 30px 20px
+              .profile
+                .photo
+                  flex: 0 0 100%
+                  margin-bottom: 20px
+                  .social-linkedin
+                    display: none
+                .text
+                  flex: 0 0 100%

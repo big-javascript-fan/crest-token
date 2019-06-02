@@ -1,0 +1,113 @@
+@import "../../../../backoffice.component"
+
+.back-office-table
+  width: 100%
+  font-family: $lato-bold
+  background-color: $widget-bg
+  border-radius: 10px
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  padding: 24px 25px
+  color: #7f8fa4
+  margin-bottom: 30px
+  table
+    width: 100%
+    border-collapse: collapse
+    th
+      font-size: 13px
+      color: #9fa9ba
+      height: 56px
+      background-color: #f5f6f8
+      &:first-child
+        padding-left: 25px
+    td,
+    th
+      text-align: left
+    tbody
+      font-size: 14px
+      tr
+        border-bottom: 1px solid #d6d6d6
+        &:last-child
+          border-bottom: none
+        td
+          padding: 16px 0
+          position: relative
+          cursor: pointer
+          &:first-child
+            padding-left: 25px
+        &.dashboard:nth-child(2)
+          td:last-child
+            span
+              display: none
+        &.dashboard
+          td:last-child
+            span
+              font-size: 11px
+              padding: 7px 17px
+              border-radius: 15px
+              border: 1px solid #7f8fa4
+        &.dashboard.ongoing
+          td:last-child
+            span
+              border-color: #62ba67
+              color: #62ba67
+        &.dashboard.next
+          td:last-child
+            span
+              border-color: #44aff2
+              color: #44aff2
+        &.dashboard.pending
+          td:last-child
+            span
+              border-color: #f8ad45
+              color: #f8ad45
+
+        &.confirmed td:last-child span
+          color: #62ba67
+        &.rejected td:last-child span
+          color: #fe4356
+        &.processed td:last-child span
+          color: #f8ad45
+h5
+  font-family: $poppins-light
+  font-size: 18px
+  color: #7f8fa4
+  text-align: center
+  margin-bottom: 15px
+
+.back-office-table
+  table
+    tbody
+      tr
+        td
+          span
+            text-overflow: ellipsis !important
+            overflow: hidden !important
+            white-space: nowrap !important
+  &.m-table
+    border-radius: 0px
+    display: none
+    table
+      th:first-child, tbody tr td:first-child
+        padding-left: 15px
+
+@media (max-width: 768px)
+  .back-office-table
+    display: none
+    &.m-table
+      display: block
+
+@media (max-width: 650px)
+  .back-office-table
+    display: none
+    &.m-table
+      display: block 
+
+@media (max-width: 480px)
+  .back-office-table
+    padding: 14px 15px
+    table
+      tbody
+        tr
+          td
+            span
+              max-width: 150px

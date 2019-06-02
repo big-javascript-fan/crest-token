@@ -1,0 +1,20 @@
+<div class="purchase-table-wrapper">
+  <div class="purchase-table">
+    <app-backoffice-table
+      [dashboardTableHead]="purchaseHead"
+      [rounds]="purchase"
+      [columns]="[
+        {value: 'created_at'},
+        {value: 'coin'},
+        {value: 'amount'},
+        {value: 'unit_price'},
+        {value: 'paidWith'},
+        {value: 'paid_amount'}
+      ]"
+      [scroll]="false"
+      [emptyMassege]="'purchases'"
+
+    ></app-backoffice-table>
+
+  </div>
+</div>

@@ -1,0 +1,71 @@
+@import "../../../../content/landing/landing.component"
+.footer
+  padding: 104px 0px 0px 0px
+  font-family: $poppins-regular
+  color: $white
+  .column
+    flex: 0 0 25%
+    .heading
+      display: block
+      min-height: 50px
+      font-size: 16px
+      letter-spacing: 0.5px
+      &.logo_link
+        display: inline-flex
+        align-items: center
+        color: #00e55d
+        margin-top: -15px
+        margin-bottom: 15px
+        img
+          width: 36px
+          height: 36px
+          margin-right: 5px
+        span
+          font-weight: bold
+    ul
+      list-style: none
+      font-size: 14px
+      margin: 0
+      li
+        opacity: 0.6
+        margin-bottom: 12px
+        &:hover
+          opacity: 1
+        a
+          text-decoration: none
+          color: $white
+    .links
+      margin-left: -10px
+      .link
+        margin-right: 3px
+        img
+          width: 48px
+          height: auto
+        &:last-child
+          margin-right: 0px
+
+#copyright
+  background-color: rgba(255,255,255,0.05)
+  font-size: 12px
+  color: rgba(255,255,255,0.6)
+  width: 100%
+  min-height: 50px
+  margin-top: 40px
+  padding: 0px 30px
+  display: flex
+  justify-content: center
+  align-items: center
+
+@media (max-width: 1100px)
+  .footer
+    .column
+      flex: 0 0 50%
+      padding-left: 10%
+      margin-bottom: 20px
+
+@media (max-width: 650px)
+  .footer
+    text-align: center
+    .column
+      flex: 0 0 100%
+      padding-left: 0px

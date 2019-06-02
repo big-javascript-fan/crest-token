@@ -1,0 +1,119 @@
+@import "../landing/landing.component"
+.sign-up-wrapper
+  header
+    padding-bottom: 0
+  .main-content
+    padding: 125px 0 100px 0
+    background: #060606
+    background-image: url("/assets/images/landing/bg-1.png")
+    background-position: bottom
+    background-repeat: no-repeat
+    background-size: 100% auto
+    .wrapper
+      flex-direction: column
+      width: 100%
+      max-width: 535px
+      margin: 0 auto
+      background-color: rgba(255,255,255,0.05)
+  h1
+    font-family: $poppins-bold
+    font-size: 36px
+    color: $white
+    margin-bottom: 30px
+    width: 100%
+    text-align: center
+    padding-top: 70px
+    padding-bottom: 35px
+  
+  .loginBtn
+    margin: 15px 0px
+    display: block
+    width: 100%
+    min-height: 40px
+    border: none
+    border-radius: 4px
+    outline: none
+    font-family: $poppins-medium
+    font-size: 14px
+    color: $white
+    cursor: pointer
+    &__facebook
+      background: #4267b2
+      .fa
+        display: inline-flex
+        margin-right: 15px
+        font-size: 29px
+    &__google
+      padding-left: 40px
+      background: #4286f5
+      justify-content: flex-start
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+        height: 40px
+        width: auto
+        border-top-left-radius: 4px
+        border-bottom-left-radius: 4px
+  .form-wrapper
+    width: 320px
+    margin: 0 auto
+    padding: 0
+    color: $white
+    font-family: $poppins-regular
+    font-size: 14px
+    text-align: center
+    padding-bottom: 40px
+    a
+      font-family: $poppins-regular
+      color: #0aa456
+      &.forgot-pass
+        text-align: right
+        width: 100%
+        display: block
+    input
+      width: 100%
+      padding: 7px 0px
+      outline: none
+      border: 1px solid #dfdfdf
+      color: $white
+      font-size: 14px
+      border-radius: 0px
+      border: none
+      border-bottom: 1px solid rgba(255, 255, 255, 0.53)
+      background: transparent
+      margin-bottom: 25px
+    .captcha-wrapper
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-top: 15px
+      margin-bottom: 35px
+    .btn-green
+      display: inline-flex
+      width: 100%
+      align-items: center
+      justify-content: center
+      background-image: linear-gradient(78deg, #227a5e, #00e55d);
+      color: $white
+      border: none
+      border-radius: 4px
+      line-height: 40px
+      min-height: 40px
+      font-family: $poppins-medium
+      font-size: 14px
+      margin: 15px 0px
+      cursor: pointer
+      &:hover
+        background: transparent
+        border-radius: 4px
+        border-width: 1px
+        border-style: solid
+        border-image-source: linear-gradient(77deg, #227a5e, #00e55d)
+        border-image-slice: 1
+      &:disabled, &[disabled]
+        background-image: linear-gradient(78deg, #757776, #bcbfbe)
+        &:hover
+          background: transparent
+          border-image-source: linear-gradient(78deg, #757776, #bcbfbe)

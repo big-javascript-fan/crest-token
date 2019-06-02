@@ -1,0 +1,10 @@
+<section class="back-office" id="backoffice">
+  <app-sidebar [isOpen]="isOpen"></app-sidebar>
+  <app-backoffice-header  (onOpen)="changeSidebar()"></app-backoffice-header>
+  <div class="inner-content">
+    <app-assets></app-assets>
+    <router-outlet></router-outlet>
+    <app-backoffice-footer></app-backoffice-footer>
+  </div>
+</section>
+

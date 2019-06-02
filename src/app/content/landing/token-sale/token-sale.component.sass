@@ -1,0 +1,80 @@
+@import "../landing.component"
+
+.token-sale
+  font-family: $poppins-regular
+  .landing-title
+    font-size: 42px
+    padding-bottom: 20px
+    color: $white
+    line-height: 1.36
+    span
+      color: #0cc05d
+  .desc
+    width: 100%
+    text-align: center
+    color: $white
+    font-size: 15px
+    line-height: 1.67
+
+  .items-wrapper
+    width: 837px
+    max-width: 100%
+    list-style: none
+    margin: 50px auto
+    font-family: $poppins-regular
+    color: $white
+    li
+      font-size: 16px
+      color: rgba(255,255,255,0.6)
+      padding: 14px 92px
+      position: relative
+      span
+        color: $white
+        display: inline-block
+        width: 50%
+      &:nth-child(2n+1)
+        background-color: rgba(255,255,255,0.05)
+        border-radius: 4px
+      &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 39px
+        width: 6px
+        height: 6px
+        border-radius: 50%
+        border: none
+        background: #fff
+      &:nth-child(1):before
+        background-image: linear-gradient(62deg, #227a5e, #00e55d)
+      &:nth-child(2):before
+        background-image: linear-gradient(to bottom, #fad961, #f76b1c)
+      &:nth-child(3):before
+        background-image: linear-gradient(8deg, #0581d7, #7cd4ec)
+      &:nth-child(4):before
+        background-image: linear-gradient(62deg, #227a5e, #33b182)
+      &:nth-child(5):before
+        background-image: linear-gradient(186deg, #f9954c, #f15c25)
+      &:nth-child(6):before
+        background-image: linear-gradient(186deg, #f9954c, #f15c25)
+      &:nth-child(7):before
+        background-image: linear-gradient(62deg, #227a5e, #00e55d)
+      &:nth-child(8):before
+        background-image: linear-gradient(to bottom, #fad961, #f76b1c)
+      &:nth-child(9):before
+        background-image: linear-gradient(8deg, #0581d7, #7cd4ec)
+      &:nth-child(10):before
+        background-image: linear-gradient(62deg, #227a5e, #33b182)
+      &:nth-child(11):before
+        background-image: linear-gradient(186deg, #f9954c, #f15c25)
+
+@media (max-width: 768px)
+  .token-sale
+    .items-wrapper
+      li
+        padding: 14px 36px
+        font-size: 14px
+        &:before
+          left: 14px

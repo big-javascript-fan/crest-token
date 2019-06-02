@@ -1,0 +1,184 @@
+@import "../../../../../assets/css/variables"
+
+.team-wr
+  margin-top: 20px
+  border-radius: 10px
+  background-color: $white
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  padding: 50px 20px 0px 20px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  overflow: hidden
+  
+  h3
+    font-family: $lato-bold
+    font-size: 24px
+    color: #637576
+    margin-bottom: 20px
+  p.desc
+    font-family: $lato-regular
+    font-size: 14px
+    line-height: 1.43
+    color: #7f8fa4
+    margin: 0 auto
+    margin-bottom: 30px
+    text-align: center
+    max-width: 410px
+  .referral-links
+    background-color: $white
+    border-radius: 10px
+    box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+    padding: 40px 60px
+    margin: 0 auto
+    margin-bottom: 50px
+    width: 600px
+    max-width: 100%
+    .link
+      border: 1px solid #62ba67
+      border-radius: 6px
+      position: relative
+      background: transparent
+      height: 58px
+      overflow: hidden
+      margin-bottom: 22px
+      label
+        position: absolute
+        top: 9px
+        left: 12px
+        font-family: $lato-regular
+        font-size: 12px
+        color: #637576
+      input
+        position: absolute
+        bottom: 7px
+        left: 12px
+        border: none
+        border-radius: 0px
+        font-family: $lato-bold
+        font-size: 16px
+        color: #637576
+        line-height: 100%
+        padding: 0px
+        letter-spacing: 0.1px
+        outline: none
+        width: 90%
+      button
+        position: absolute
+        top: 0px
+        right: 0px
+        width: 52px
+        height: 58px
+        background-color: #62ba67
+        border: none
+        font-size: 20px
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: .2s
+        cursor: pointer
+        &:hover
+          font-size: 25px
+    p
+      margin-top: 20px
+      margin-bottom: 7px
+      font-family: $lato-regular
+      font-size: 14px
+      color: #637576
+      text-align: left
+    .source
+      input
+        width: 100%
+        height: 40px
+        border-radius: 3px
+        border: 1px solid #e0e0e0
+        padding: 11px 15px
+        font-family: $lato-regular
+        font-size: 14px
+        color: #637576
+        outline: none
+        text-shadow: none
+        box-shadow: none
+  .achievements
+    flex: 0 0 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: -20px
+    margin-right: -20px
+    .item
+      flex: 0 0 49.9%
+      background-color: #f5f6f8
+      min-height: 88px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-family: $lato-regular
+      font-size: 12px
+      letter-spacing: 0.4px
+      color: #0f0f0f
+      img
+        width: 40px
+        margin-right: 16px
+      span
+        font-family: $lato-bold
+        font-size: 14px
+        letter-spacing: 0.2px
+        color: #1e9324
+        margin-left: 10px
+  
+.resources
+  margin-top: 30px
+  background-color: $white
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  border-radius: 10px
+  padding: 20px
+  .links-wr
+    width: 100%
+    overflow-x: auto
+  ul.tab-links
+    position: relative
+    min-width: 800px
+    &:after
+      content: ''
+      bottom: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 1px
+      background-color: #eaeaea
+      z-index: 1
+      overflow-x: auto
+    li
+      display: inline-block
+      padding:  0px 30px 20px 30px
+      font-family: $lato-bold
+      font-size: 14px
+      color: #7f8fa4
+      cursor: pointer
+      border-bottom: 2px solid transparent
+      position: relative
+      min-width: 177px
+      margin-right: 10px
+      text-align: center
+      z-index: 2
+      &:last-child
+        margin-right: 0px
+      &:hover, &.active
+        border-bottom-color: #62ba67
+        color: #62ba67
+@media (max-width: 700px)
+  .team-wr
+    h3
+      font-size: 20px
+    .referral-links
+      padding: 0px
+      box-shadow: none
+    .achievements
+      flex-direction: column
+      .item
+        flex: 0 0 100%
+        &:first-child
+          margin-bottom: 2px

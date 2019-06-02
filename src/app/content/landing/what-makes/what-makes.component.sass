@@ -1,0 +1,61 @@
+@import "../landing.component"
+.what-makes-wr
+  padding-bottom: 80px
+  .landing-title
+    font-size: 42px
+    font-family: $poppins-bold
+    color: $white
+    line-height: 1.36
+    span
+      color: #0cc05d
+
+.what-makes-row
+  display: flex
+  flex-wrap: wrap
+  .cell
+    width: 25%
+
+.what-makes-item
+  max-width: 272px
+  padding: 0 10px
+  margin: 0 auto 80px auto
+  min-height: 30px
+  font-family: $poppins-regular
+  font-size: 15px
+  color: $white
+  line-height: 1.47
+  text-align: center
+  .item-img
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto 25px auto
+    width: 97px
+    height: 97px
+    border-radius: 50%
+    img
+      width: 70%
+
+@media only screen and (max-width: 850px)
+  .what-makes-row
+    .cell
+      width: 50%
+  .what-makes-item
+    font-size: 16px
+    margin-bottom: 40px
+
+@media only screen and (max-width: 768px)
+  .what-makes-wr
+    padding-top: 60px
+    .landing-title
+      font-family: $poppins-semibold
+      font-size: 27px
+@media only screen and (max-width: 600px)
+  .what-makes-row
+    .cell
+      width: 100%
+      &:last-child
+        .what-makes-item
+          margin-bottom: 0
+  .what-makes-item
+    font-size: 14px

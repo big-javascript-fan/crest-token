@@ -1,0 +1,61 @@
+<div class="sidebar" [ngClass]="{'open': isOpen}">
+  <!-- <div class="balance-wr">
+    <div class="balance-title">Your balance</div>
+    <div *ngFor="let item of wallets$ | async" class="sidebar-item">
+      <span class="currency">{{item.asset.code | uppercase}}</span>
+      <span class="val">{{item.balance }}</span>
+    </div>
+  </div> -->
+  <ul class="navigate">
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/dashboard']">
+        <i class="icon-home"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/buy']">
+        <i class="icon-shoppingCart"></i>
+        <span>Buy Tokens</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/wallet']">
+        <i class="icon-wallet"></i>
+        <span>Wallet</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/team']">
+        <i class="icon-team"></i>
+        <span>My Team</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/campaign']"  *appNgAcl="['campaign', 'GET']">
+        <i class="icon-building"></i>
+        <span>Campaign</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/exchange']" *appNgAcl="['exchange', 'GET']">
+        <i class="icon-transfer"></i>
+        <span>Exchange</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/staking']" *appNgAcl="['staking', 'GET']">
+        <i class="icon-dollar-symbol"></i>
+        <span>Staking</span>
+      </a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['/settings']" *appNgAcl="['settings', 'GET']">
+        <i class="icon-settings"></i>
+        <span>Settings</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+

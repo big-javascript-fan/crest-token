@@ -1,0 +1,158 @@
+@import "../../../../../assets/css/variables"
+
+.coming-pay-wrappper
+  display: inline-block
+  width: 100%
+  margin: -10px 0 80px 20px
+  background-repeat: no-repeat
+  background-size: cover
+  h1
+      font-size: 24px
+      text-align: center
+  h2
+      font-size: 24px
+      text-align: center
+
+
+  .elipse-big
+      display: flex
+      background-color: rgba(26,35,46,0.7)
+      position: relative
+      width: 490px
+      height: 490px
+      border-radius: 100%
+      margin: auto
+      margin-top: 145px
+      margin-bottom: 230px
+      box-shadow: 0 0 38px 5px rgba(24,248,188,0.5)
+      .text-in-circle
+          margin: auto
+          max-width: 435px
+          position: relative
+          .head-text
+              color: $grey-light
+              margin-bottom: 15px
+              font-family: $OpenSansSemiBold
+              font-size: 24px
+              text-transform: uppercase
+          .paragraph-text
+              text-align: center
+              margin-bottom: 30px
+              font-family: $OpenSansRegular
+              font-size: 16px
+              color: $comingsoon-grey
+          .come-soon
+              color: $grey-light
+              position: relative
+              font-family: $OpenSansSemiBold
+              letter-spacing: 18px
+              text-align: center
+              margin-right: -3px
+              line-height: 20px
+              h2
+                  margin-right: -19px
+                  display: inline-block
+              &:after
+                  display: block
+                  content: ""
+                  position: absolute
+                  left: 50%
+                  top: calc(100% + 25px)
+                  transform: translateX(-50%)
+                  width: 100%
+                  height: 2px
+                  background-color: $accent-color
+                  max-width: 325px
+  .elipse-small
+      position: absolute
+      left: 50px
+      top: 52px
+      background-color: rgba(0,231,199,0.8)
+      box-shadow: 0 0 20px 5px rgba(24,248,188,0.5)
+      width: 37px
+      height: 37px
+      border-radius: 100%
+
+@media screen and (max-width: 1366px)
+    .coming-pay-wrappper
+        margin: 0 0 0 0
+        .elipse-big
+            width: 100%
+            max-width: 440px
+            max-height: 440px
+            margin-top: 100px
+            margin-bottom: 90px
+            .text-in-circle
+                .head-text
+                    h1
+                        font-size: 20px
+                        margin-bottom: 23px
+                .paragraph-text
+                    font-size: 14px
+                    padding: 0 25px
+                .come-soon
+                    letter-spacing: 14px
+                    margin-bottom: 35px
+                    h2
+                        font-size: 20px
+                    &:after
+                        max-width: 280px
+        .elipse-small
+            width: 32px
+            height: 32px
+            left: 54px
+            top: 38px
+
+@media only screen and (max-width: 1024px)
+    .coming-pay-wrappper
+        .elipse-big
+            margin: 90px auto
+
+
+@media only screen and (max-width: 768px)
+    .coming-pay-wrappper
+        margin-top: 20px
+        .elipse-big
+            margin: 205px auto 190px auto
+
+@media only screen and (max-width: 500px)
+    .coming-pay-wrappper
+        .elipse-big
+            margin: 120px auto 120px auto
+            width: 100%
+            max-width: 320px
+            max-height: 320px
+            .text-in-circle
+                .head-text
+                    h1
+                        font-size: 14px
+                .paragraph-text
+                    font-size: 12px
+                .come-soon
+                    letter-spacing: 11px
+                    h2
+                        font-size: 14px
+                    &:after
+                        max-width: 205px
+        .elipse-small
+            width: 23px
+            height: 23px
+            left: 47px
+            top: 25px
+
+@media only screen and (max-width: 370px)
+    .coming-pay-wrappper
+        margin-top: 20px
+        .elipse-big
+            margin: 50px auto 60px auto
+            width: 100%
+            max-width: 320px
+            max-height: 320px
+
+@media only screen and (max-width: 359px)
+    .coming-pay-wrappper
+        .elipse-big
+            margin: 55px auto 60px auto
+            width: 100%
+            max-width: 200px
+            max-height: 200px

@@ -1,0 +1,37 @@
+@import "../../../backoffice.component"
+.call-action-wr
+  background-color: $widget-bg
+  border-radius: 10px
+  padding: 35px
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  i
+    font-size: 43px
+    color: #ea676f
+  .call-action-text
+    font-family: $lato-bold
+    font-size: 24px
+    color: #637576
+    margin: 25px 0px
+    i
+      font-size: 26px
+      display: none
+
+@media (max-width:  1200px)
+  .call-action-wr
+    max-width: 480px
+    margin-left: auto
+    margin-right: auto
+
+@media (max-width: 480px)
+  .call-action-wr
+    max-width: 100%
+    i
+      display: none
+    .call-action-text
+      font-size: 20px
+      i
+        display: inline

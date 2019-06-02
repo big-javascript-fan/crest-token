@@ -1,0 +1,118 @@
+@import "../../../assets/css/variables"
+
+#landing-wrapper
+  background-color: #fff
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none !important
+
+a, button
+  &:focus
+    outline: 0
+
+.main-container
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  margin: 0 auto
+  max-width: 1230px
+  padding: 0 15px
+  position: relative
+  .wrapper
+    width: 100%
+    background: transparent
+    position: relative
+    display: flex
+    justify-content: space-between
+
+
+.landing-text
+  font-family: $poppins-light
+  font-size: 18px
+  color: #000
+  line-height: 1.8
+
+.landing-row
+  width: 100%
+  display: flex
+  flex-wrap: nowrap
+  .cell
+    width: 50%
+    min-height: 100px
+
+.footer
+  border: none
+  background: transparent
+  display: flex
+  justify-content: space-between
+  align-items: center
+  min-height: 80px
+  p
+    font-family: $poppins-regular
+    font-size: 12px
+    opacity: 0.6
+    color: #161921
+    text-align: center
+  a
+    font-family: $montserrat-regular
+    font-size: 16px
+    color: #0aae5a
+    text-decoration: underline !important
+
+@media only screen and (max-width: 900px)
+  .landing-text
+    font-size: 16px
+  .footer
+    min-height: 120px
+    flex-direction: column-reverse
+    justify-content: center
+    a
+      margin-bottom: 20px
+
+@media only screen and (max-width: 600px)
+  #landing-wrapper
+    background-size: 200% auto
+  .landing-text
+    font-size: 14px
+  h3
+    &.landing-title
+      font-size: 26px
+
+@media only screen and (max-width: 550px)
+  .login-wr,
+  .sign-up-wrapper
+    .main-container
+      .loginBtnSocial
+        flex-direction: column
+        align-items: center
+        margin-bottom: 0 !important
+        .loginBtn
+          margin-bottom: 25px
+
+@media only screen and (max-width: 400px)
+  input::-webkit-input-placeholder
+    color: #a1a1a1
+    font-size: 14px
+    font-family: $poppins-light
+    opacity: 1
+  input::-moz-placeholder
+    color: #a1a1a1
+    font-size: 14px
+    font-family: $poppins-light
+    opacity: 1
+  input:-ms-input-placeholder
+    color: #a1a1a1
+    font-size: 14px
+    font-family: $poppins-light
+    opacity: 1
+  input:-moz-placeholder
+    color: #a1a1a1
+    font-size: 14px
+    font-family: $poppins-light
+    opacity: 1
+  .login-wr,
+  .sign-up-wrapper
+    .form-wrapper .captcha-wrapper
+      transform: scale(0.8)

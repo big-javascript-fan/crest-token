@@ -1,0 +1,30 @@
+<div class="sign-up-wrapper">
+  <app-header-auth></app-header-auth>
+  <section class="main-content">
+    <div class="main-container">
+      <div class="wrapper">
+        <h1>Sign Up, It's Free</h1>
+        <div class="form-wrapper">
+          <form [formGroup]="form" (ngSubmit)="save(form.value)">
+            <input type="text" placeholder="Name" formControlName="name" class="form-control">
+            <input type="text" placeholder="Username" formControlName="username" class="form-control">
+            <input type="text" placeholder="Email" formControlName="email" class="form-control">
+            <input type="password" placeholder="Password" formControlName="password" class="form-control">
+
+            <div class="captcha-wrapper">
+              <re-captcha formControlName="recaptchaReactive"></re-captcha>
+            </div>
+            
+            <button [disabled]="form.invalid" class="btn-green">Sign Up</button>
+            or
+            <button class="loginBtn loginBtn__google" (click)="googleLogin()">
+              <img src="/assets/images/landing/google.png" alt="google">
+              Log In with Google
+            </button>
+            <p class="redirection-link">Already have an account? <a [routerLink]="['/login']" class="register-login">Sign In</a>. </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

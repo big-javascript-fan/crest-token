@@ -1,0 +1,12 @@
+<div class="select-currency" *ngIf="(wallets$ | async)?.length">
+  <ng-select [searchable]="false" [(ngModel)]="currentCoinObj" [items]="wallets$ | async" (change)="selectCoin($event)">
+    <ng-template ng-label-tmp let-item="item">
+      <img width="15" [src]="'/assets/images/backoffice/' + item.asset.code + '.png'"/>&nbsp;
+      <span class="balance">Balance:&nbsp;&nbsp;<span>{{item.balance}} {{item.asset.code | uppercase}}</span>&nbsp;&nbsp;<span>=&nbsp;&nbsp;$ {{item.usd_balance}}</span></span>
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item">
+      <img width="15" [src]="'/assets/images/backoffice/' + item.asset.code + '.png'"/>&nbsp;
+      <span class="balance">Balance:&nbsp;&nbsp;<span>{{item.balance}} {{item.asset.code | uppercase}}</span>&nbsp;&nbsp;<span>=&nbsp;&nbsp;$ {{item.usd_balance}}</span></span>
+    </ng-template>
+  </ng-select>
+</div>

@@ -1,0 +1,30 @@
+@import "../landing.component"
+.roadmap-wr
+  .landing-title
+    font-size: 42px
+    font-family: $poppins-bold
+    color: $white
+    line-height: 1.36
+    span
+      color: #0cc05d
+
+.roadmap-row
+  width: 90%
+  margin: 0 auto
+  padding: 50px 0
+  img
+    width: 100%
+    &.mobile-only
+      display: none
+
+@media (max-width: 768px)
+  .roadmap-wr
+    .landing-title
+      font-family: $poppins-semibold
+      font-size: 27px
+    .roadmap-row
+      img
+        display: none
+        &.mobile-only
+          display: inline
+          width: 330px

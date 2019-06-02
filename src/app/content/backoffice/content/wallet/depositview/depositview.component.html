@@ -1,0 +1,49 @@
+<div class="deposit-wrapper" *ngIf="coin">
+  <div class="deposit-content">
+    <div class="pay-atention-wrapper" *ngIf="confirmButton">
+      <div class="pay-attention">
+        Please pay attention!<br>You selected:
+      </div>
+      <div class="deposit-currency">
+        <img src="/assets/images/backoffice/{{coin.asset.code}}.png" width="22" />
+        <span class="sidebar-text">{{coin.asset.code | uppercase}}</span>
+      </div>
+      <div class="deposit-attention">
+        <span>Attention:</span> Please do not mistakenly deposit other assets with the same name, it can not be retrieved!
+      </div>
+      <div class="deposit-confirm">
+        <button type="button" (click)="confirmSelected()">Confirm</button>
+      </div>
+    </div>
+
+    <div class="deposit-currency-wrapper" *ngIf="!confirmButton">
+      <div class="pay-attention">
+        Deposit 
+        {{coin.asset.code === 'btc' ? 'Bitcoin': '' }}
+        {{coin.asset.code === 'eth' ? 'Ethereum': '' }}
+        {{coin.asset.code === 'xmr' ? 'Monero': '' }}
+      </div>
+      <div class="deposit-currency">
+        Only send
+          {{coin.asset.code === 'btc' ? 'bitcoin' : '' }}
+          {{coin.asset.code === 'eth' ? 'ethereum' : '' }}
+          {{coin.asset.code === 'xmr' ? 'monero' : '' }}
+          ({{coin.asset.code | uppercase}}) to this address.<br>Sending any other digital asset, including<br>
+          {{coin.asset.code === 'btc' ? 'Bitcoin': 'Ethereum' }}
+          Cash, will result in permanent loss.
+      </div>
+      <div class="deposit-attention">
+        Your {{coin.asset.code | uppercase}} address is
+      </div>
+      <form>
+          <input readonly [value]="coin.top_up_address"
+                 #address
+                 type="text">
+      </form>
+      <div class="button-copy-adress">
+        <button class="btn emptyGreen" [ngxClipboard]="address" (cbOnSuccess)="copyAddress()">Copy address</button>
+      </div>
+    </div>
+  </div>
+
+</div>

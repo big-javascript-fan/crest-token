@@ -1,0 +1,52 @@
+@import "../../../backoffice.component"
+
+.personal-information-wrapper
+  background: $white
+  border-radius: 10px
+  box-shadow: 0 12px 32px 0 rgba(40, 46, 54, 0.07)
+  margin-bottom: 35px
+  padding: 30px 24px
+  form
+    .input-wrapper
+      display: flex
+      flex-direction: column
+      margin-bottom: 14px
+      position: relative
+      label
+        font-family: $lato-regular
+        font-size: 14px
+        color: #637576
+        line-height: 2
+        .warning
+          float: right
+          color: #e33e57
+      .icon-edit, .icon-tick
+        position: absolute
+        top: 30px
+        right: 0px
+        color: #0f0f0f
+        cursor: pointer
+        opacity: 0.5
+        background: transparent
+        border: none
+        outline: none
+        font-size: 30px
+        &:hover
+          opacity: 1
+      .icon-tick
+        top: 35px
+        font-size: 20px
+      input
+        background-color: $white
+        border-radius: 4px
+        height: 40px
+        border: 1px solid #eee
+        box-shadow: none
+        padding-left: 16px
+        line-height: 100%
+        font-family: $lato-regular
+        font-size: 14px
+        color: #7f8fa4
+        outline: none
+        &[readonly], &[disabled]
+          background-color: #f5f6f8

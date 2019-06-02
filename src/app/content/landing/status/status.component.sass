@@ -1,0 +1,121 @@
+@import "../landing.component"
+
+.status-wr
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0px auto 20px auto
+  .progress-wr
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+    padding: 9px 13px
+    background-color: #1a1a1a
+    border-radius: 50px
+    width: 150%
+    max-width: 537px
+    position: relative
+    span
+      &.active
+        height: 6px
+        border-radius: 7px
+        background-image: linear-gradient(to bottom, #ffc80a, #f7ba1c)
+        position: relative
+        .oval
+          position: absolute
+          padding: 7px
+          top: -13px
+          right: -17px
+          border: 1px solid #f7ba1c
+          border-radius: 50%
+          .measure
+            display: block
+            width: 16px
+            height: 16px
+            background-color: #ffc80a
+            border-radius: 50%
+      &.inactive
+        height: 6px
+        background-color: #2a2a2a
+        border-radius: 10px
+      &.percent
+        position: absolute
+        font-size: 20px
+        font-family: $poppins-regular
+        line-height: 1.4
+        color: $white
+        height: auto
+        top: 50%
+        left: 105%
+        opacity: 0.7
+        transform: translate(0%, -50%)
+        
+  h2.token-sold
+    font-family: $poppins-regular
+    color: $white
+    font-size: 22px
+    font-weight: 500
+    line-height: 1.45
+    margin-top: 20px
+    margin-bottom: 20px
+    span
+      color: #00af56
+  h2.total-users
+    font-family: $poppins-semibold
+    color: $white
+    font-size: 30px
+    margin-top: 45px
+    letter-spacing: 1.2px
+    span
+      color: $green
+  
+  .ico-countdown
+    background: linear-gradient(84deg, #227a5e, #00e55d)
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 345px
+    min-height: 70px
+    padding-top: 5px
+    ul
+      display: inline-block
+      margin: 0 auto
+      li
+        display: inline-block
+        vertical-align: top
+        font-family: $poppins-light
+        font-size: 32px
+        color: #fff
+        text-align: center
+        letter-spacing: 1px
+        line-height: 27px
+        span.unit
+          display: block
+          font-size: 12px
+        &.separator
+          padding: 0px
+          margin: 0px 5px
+          line-height: 25px
+
+@media (max-width: 968px)
+  .status-wr
+    margin-bottom: 0px
+    .progress-wr
+      margin-left: -50px
+      width: 82%
+      span
+        font-size: 20px
+    h2.token-sold
+      font-size: 20px
+      margin: 10px 0px
+
+@media (max-width: 600px)
+  .status-wr
+    .ico-countdown
+      width: 335px
+    .progress-wr
+      span.percent
+        font-size: 16px

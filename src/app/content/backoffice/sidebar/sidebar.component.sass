@@ -1,0 +1,64 @@
+@import "../backoffice.component"
+
+.sidebar
+  font-family: $lato-regular
+  position: fixed
+  z-index: 100
+  left: 0
+  top: 56px
+  bottom: 0
+  width: 100%
+  max-width: 72px
+  background-color: #fff
+  padding: 30px 0px 0px 0px
+  transition: $transition
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.04)
+  color: #c0c9d1
+  overflow: hidden
+
+  .navigate
+    li
+      padding: 3px 14px 3px 14px
+      a
+        color: #637576
+        font-size: 14px
+        padding: 14px
+        background-color: transparent
+        transition: $transition
+        display: flex
+        flex-wrap: nowrap
+        span
+          margin-left: 25px
+          opacity: 0
+          transition: opacity .35s
+          min-width: 120px
+        &:hover, &.active
+          border-radius: 6px
+          background-color: $bg-highlight-primary
+          color: #fff
+
+  &:hover
+    max-width: 212px
+    .navigate
+      li
+        a
+          span
+            opacity: 1
+
+@media screen and (max-width: 768px)
+  .sidebar
+    display: block
+    max-width: 220px
+    width: 220px
+    transform: translateX(-220px)
+    transition: $transition
+    .sidebar-text,
+    .balance-title
+      opacity: 1
+    &.open
+      transform: translateX(0)
+      padding: 14px 0 0
+  .sidebar *
+    opacity: 1 !important
+    color: #c0c9d1 !important
+    

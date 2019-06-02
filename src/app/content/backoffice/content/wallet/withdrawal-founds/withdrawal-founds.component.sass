@@ -1,0 +1,69 @@
+@import "../../../backoffice.component"
+.buy-form
+  background-color: transparent
+  border: none
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin: 40px 0px
+  font-family: $lato-regular
+  color: #637576
+  .buy-form-title
+    font-size: 24px
+    font-weight: normal
+    display: block
+    width: 100%
+    text-align: center
+  form
+    display: block
+    width: 100%
+    max-width: 685px
+    .form-group
+      display: block
+      .form-input
+        font-size: 14px
+        padding: 11px 15px
+        font-size: 14px
+        color: #637576
+        border-radius: 3px
+        border: 1px solid #ddd
+        z-index: 11
+      ::placeholder
+        opacity: 0.4
+      label
+        display: block
+        width: 100%
+        font-size: 14px
+        letter-spacing: 0.4px
+        padding-bottom: 7px
+
+  .total
+    font-size: 16px
+    text-align: center
+    line-height: 1.69
+    margin-top: 35px
+    .total-title
+      font-size: 12px
+
+  .currency-btn
+    text-align: center
+    margin-top: 45px
+    ::ng-deep button
+      width: 173px
+      height: 40px
+      border-radius: 4px
+      background-color: #62ba67
+      font-size: 14px
+      font-family: $lato-regular
+      font-weight: 500
+      color: $white
+      &[disabled]
+        opacity: 0.5
+
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0

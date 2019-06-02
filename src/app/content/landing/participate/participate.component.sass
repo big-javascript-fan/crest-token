@@ -1,0 +1,71 @@
+@import "../landing.component"
+.participate-wr
+  width: 100%
+  padding: 150px 0
+  .landing-title
+    font-size: 42px
+    font-family: $poppins-bold
+    color: $white
+    line-height: 1.36
+    padding-bottom: 10px
+    span
+      color: #0cc05d
+  .desc
+    font-family: $poppins-regular
+    font-size: 15px
+    line-height: 1.47
+    color: $white
+    width: 100%
+    text-align: center
+
+  ul.participate
+    margin: 50px auto
+    width: 90%
+    list-style: none
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    font-family: $poppins-regular
+    color: $white
+    li
+      flex: 0 0 20%
+      position: relative
+      align-items: center
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      text-align: center
+      .number
+        border-radius: 50%
+        border: 1px solid #227a5e
+        line-height: 34px
+        width: 34px
+        height: 34px
+        font-size: 16px
+      .image
+        width: 59px
+        max-width: 59px
+        height: 90px
+        img
+          width: 100%
+      .text
+        font-size: 15px
+        line-height: 1.47
+        padding-top: 20px
+
+@media only screen and (max-width: 1150px)
+  .participate-wr
+    ul.participate
+      flex-direction: column
+      li
+        margin-bottom: 30px
+        .number
+          display: none
+        .image
+          height: auto
+
+@media only screen and (max-width: 768px)
+  .participate-wr
+    .landing-title
+      font-family: $poppins-semibold
+      font-size: 27px
